@@ -6,7 +6,7 @@ public class Klass {
     private String displayName;
 
     public String getDisplayName() {
-        return displayName;
+        return "Class "+this.getNumber();
     }
 
     public Klass(int number){
@@ -30,9 +30,9 @@ public class Klass {
     }
 
     public String appendMember(Student student){
-        if(student.getKlass()==getKlass()){
+        if(student.getKlass()==this.getKlass()){
             return null;
         }
-        return "It is not one of us.";
+        return "It is not one of us.\n";
     }
 }

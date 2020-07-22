@@ -12,6 +12,11 @@ public class Student extends Person{
     }
 
     public String introduce(){
-        return "My name is "+getName()+". I am "+getAge()+" years old. I am a Student. I am at Class "+getKlass()+".";
+        if(this==this.getKlass().getLeader()){
+            return "My name is "+getName()+". I am "+getAge()+" years old. I am a Student. I am Leader of "+getKlass().getDisplayName()+".";
+        }else{
+            return "My name is "+getName()+". I am "+getAge()+" years old. I am a Student. I am at "+getKlass().getDisplayName()+".";
+        }
+
     }
 }

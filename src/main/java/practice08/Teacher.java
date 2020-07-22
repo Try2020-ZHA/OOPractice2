@@ -4,6 +4,7 @@ public class Teacher extends Person{
     private Klass klass;
     public Teacher(int age,String name,int id){
         super(age,name,id);
+        this.klass=null;
     }
 
     public Teacher(int age,String name,int id,Klass klass){
@@ -12,10 +13,10 @@ public class Teacher extends Person{
     }
 
     public String introduce(){
-        if(this.getKlass()!=null){
+        if(this.getKlass()==null){
             return "My name is "+this.getName()+". I am "+this.getAge()+" years old. I am a Teacher. I teach No Class.";
         }else{
-            return "My name is "+this.getName()+". I am "+this.getAge()+" years old. I am a Teacher. I teach Class "+this.getKlass()+".";
+            return "My name is "+this.getName()+". I am "+this.getAge()+" years old. I am a Teacher. I teach Class "+this.getKlass().getNumber()+".";
         }
     }
 

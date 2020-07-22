@@ -13,7 +13,7 @@ public class Klass {
     }
 
     public String getDisplayName() {
-        return displayName;
+        return "Class "+this.number;
     }
 
     public Klass getKlass(){

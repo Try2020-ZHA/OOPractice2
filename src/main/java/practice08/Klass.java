@@ -6,7 +6,7 @@ public class Klass {
     private String displayName;
 
     public String getDisplayName() {
-        return displayName;
+        return "Class "+this.getNumber();
     }
 
     public Klass(int number){
